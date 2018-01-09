@@ -3,9 +3,10 @@ from django.shortcuts import render
 from stu.models import Test
 
 def add(request):
-    stu1=Test(name='',high='180',course='python',sex='男')
+    stu1=Test(name='王五',high='182',course='java',sex='男')
     stu1.save()
-    return render(request,'add.html')
+    # return render(request,'add.html')
+    return HttpResponse("添加成功")
 
 def select(request):
     list=Test.objects.filter(name='张三')
